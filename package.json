@@ -1,14 +1,14 @@
 {
   "name": "recipe",
-   "homepage": "https://shurgith.github.io/recipe/",
+  "homepage": "https://shurgith.github.io/recipe/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite --host --port 3000",
     "build": "vite build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",  
     "lint": "eslint .",
     "preview": "vite preview"
   },
