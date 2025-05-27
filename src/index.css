@@ -3,12 +3,12 @@
 @import "tailwindcss";
 
 @theme {
-  --text-young: "Young Serif", serif;
-  --text-outfit: "Outfit", sans-serif;
-  --text-normal: 16px;
-  --text-cuatro: 400;
+  --font-young: "Young Serif", serif;
+  --font-outfit: "Outfit", sans-serif;
+  --font-normal: 16px;
+  --font-cuatro: 400;
   --text-seis: 600;
-  --text-siete: 700;
+  --font-siete: 700;
 
   --color-stone1: hsl(30, 54%, 90%);
   --color-stone2: hsl(30, 18%, 87%);
@@ -22,15 +22,13 @@
 }
 
 * {
-  font-family: var(--text-outfit);
-  font-weight: 400;
-  font-size: var(--text-normal);
+  font-family: var(--font-outfit);
 }
 
 p {
-  font-family: var(--text-outfit);
+  font-family: var(--font-outfit);
   font-weight: 400;
-  font-size: var(--text-normal);
+  color: var(--color-stone3);
 }
 
 h1,
@@ -39,6 +37,18 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--text-young);
+  font-family: var(--font-young);
+}
+ol {
+  counter-reset: item;
+}
+ol li {
+  display: block;
+}
+ol li:before {
+  content: counter(item) ". ";
+  counter-increment: item;
+  color: var(--color-brown);
   font-weight: 700;
+  padding-right: 12px;
 }
