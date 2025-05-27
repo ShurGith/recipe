@@ -1,16 +1,20 @@
 {
   "name": "recipe",
+   "homepage": "https://shurgith.github.io/recipe/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite --host --port 3000",
     "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",  
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.7",
+    "gh-pages": "^6.3.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "tailwindcss": "^4.1.7"
